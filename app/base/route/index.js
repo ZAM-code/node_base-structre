@@ -5,15 +5,16 @@ let router = express.Router();
 //routes
 let adminRoute = require('./../../admin/auth/route/api')
 let authMiddleware = require('./../middlewares/authmiddleware')
+let api = require("./api")
 
 //use routes
 router.use("/admin" , adminRoute)
 
 
 router.use(authMiddleware);
+
+router.use("/",api)
 //routers
-router.get('/', (req, res, next) => {
-    res.send('Online Shop ');
-})
+
 
 module.exports = router 

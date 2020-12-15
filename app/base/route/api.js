@@ -1,9 +1,14 @@
 // pakeges
 let express = require('express');
 let router = express.Router();
-
 //routes
+
 //use routes
 
 //routers
-module.exports = router
+router.get('/', (req, res, next) => {
+    res.send('Online Shop ');
+})
+
+
+module.exports = router 
